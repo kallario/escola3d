@@ -1,0 +1,21 @@
+<%= simple_form_for(@caderno_resposta) do |f| %>
+
+      <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
+      <%= f.hidden_field :pergunta_id, :value => caderno_resposta.pergunta.id %>
+
+      <h4><%= caderno_resposta.pergunta.id %>) <%= caderno_resposta.pergunta.grupo.titulo_grupo %> <%= caderno_resposta.pergunta.titulo_pergunta %></h4>
+
+      <br><br>
+
+      <% caderno_resposta.pergunta.grupo.respostas.each do |resposta| %>
+        <%= f.radio_button :resposta, resposta.peso %> <%= resposta.resposta %><br>
+      <% end %>
+
+      <br><br>
+
+      <div class="actions">
+        <%= f.submit "Responder" %>
+      </div>
+
+
+<% end %>

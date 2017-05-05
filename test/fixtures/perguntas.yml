@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grupo: one
+  titulo_pergunta: MyText
+
+two:
+  grupo: two
+  titulo_pergunta: MyText

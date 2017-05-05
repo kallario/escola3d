@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario: one
+  dom: one
+  tipo: 1
+  valor: 1
+
+two:
+  usuario: two
+  dom: two
+  tipo: 1
+  valor: 1

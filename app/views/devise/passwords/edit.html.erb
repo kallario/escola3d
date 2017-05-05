@@ -1,0 +1,13 @@
+<div class="login-page">
+  <div class="form">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.hidden_field :reset_password_token %>
+      <%= f.password_field :password, autofocus: true, autocomplete: "off", placeholder: 'Informe sua nova senha' %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Confirme sua nova senha' %>
+      <%= f.submit "Mude minha Senha" %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>

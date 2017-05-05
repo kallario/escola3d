@@ -1,0 +1,86 @@
+<section id="title" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Escola de Dons 3D</h1>
+                <p>Descubra-Desenvolva-Demonstre</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="breadcrumb pull-right">
+									<% if usuario_signed_in? %>
+									  <li>
+									  <%= link_to('Sair do Sistema', destroy_usuario_session_path, :method => :delete) %>
+									  </li>
+									<% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!--/#title-->
+
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+         <h1>Meus Dons</h1>
+
+          <br><br>
+
+          <div class="row">
+            <div class="col-sm-6">
+
+                <h3>Dons Manifestos</h3>
+
+                <table class='table table-striped'>
+                  <thead>
+                    <tr>
+                      <th>Dom</th>
+                      <th>valor</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% @resultados_manifestos.each do |manifestos| %>
+                      <tr>
+                        <td><%= manifestos.dom.nome_dom %></td>
+                        <td><%= manifestos.valor %></td>
+                      </tr>
+                    <% end %>
+
+                  </tbody>
+                </table>
+            </div>
+            <div class="col-sm-6">
+
+                <h3>Dons Latentes</h3>
+
+                <table class='table table-striped'>
+                  <thead>
+                    <tr>
+                      <th>Dom</th>
+                      <th>valor</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <% @resultados_latentes.each do |latentes| %>
+                      <tr>
+                        <td><%= latentes.dom.nome_dom %></td>
+                        <td><%= latentes.valor %></td>
+                      </tr>
+                    <% end %>
+
+                  </tbody>
+                </table>
+            </div>
+          </div>
+
+          <div class='col-md-2'>
+            <%= link_to 'Voltar', root_path, class: 'btn btn-danger' %>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>

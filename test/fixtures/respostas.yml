@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grupo: one
+  resposta: MyString
+  peso: 1
+
+two:
+  grupo: two
+  resposta: MyString
+  peso: 1

@@ -1,0 +1,2 @@
+class Dom < ApplicationRecord
+end

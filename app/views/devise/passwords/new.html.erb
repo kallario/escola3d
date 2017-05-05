@@ -1,0 +1,11 @@
+<div class="login-page">
+  <div class="form">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
+      <%= f.email_field :email, autofocus: true, placeholder: 'Informe seu email' %>
+      <%= f.submit "Recuperar Senha" %>
+    <% end %>
+  </div>
+</div>
+
+<%= render "devise/shared/links" %>

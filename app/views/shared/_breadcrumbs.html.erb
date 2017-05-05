@@ -1,0 +1,25 @@
+<section id="title" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>e-SIC</h1>
+                <p>Sistema Eletrônico de Informação ao Cidadão</p>
+                <% if !empresa_selecionada.nil? %>
+                  <h3><%= empresa_selecionada.nome_empresa %></h3>
+                <% end %>
+            </div>
+            <div class="col-sm-6">
+              <% if logged_in? %>
+                 <ul class="breadcrumb pull-right">
+                   <li>Olá <%= current_solicitante.nome_completo %> </li>
+    						   <li>
+                      <%= link_to sign_out_path, method: "delete" do %> Sair do Sistema
+                        <i class="glyphicon glyphicon-home"></i>
+                      <% end %>
+                   </li>
+                </ul>
+              <% end %>
+            </div>
+        </div>
+    </div>
+</section>

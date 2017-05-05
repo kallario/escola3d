@@ -1,0 +1,63 @@
+<section id="title" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Escola de Dons 3D</h1>
+                <p>Descubra-Desenvolva-Demonstre</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="breadcrumb pull-right">
+									<% if usuario_signed_in? %>
+									  <li>
+									  <%= link_to('Sair do Sistema', destroy_usuario_session_path, :method => :delete) %>
+									  </li>
+									<% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!--/#title-->
+
+<section id="services">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+  <div class="row">
+        <div class="col-sm-12">
+          <div>
+<h2>Novo Cadastro</h2>
+</div>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-inputs">
+    <%= f.input :email, placeholder: 'user@domain.com', class: "form-control" %>
+    <%= f.input :password, hint: 'No special characters.', class: "form-control" %>
+    <%= f.input :password_confirmation, hint: 'No special characters.', class: "form-control" %>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-actions">
+      <%= f.button :submit, "Atualizar", class: 'btn btn-success btn-lg' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-actions">
+      <%= link_to "Voltar", :back, class: 'btn btn-warning btn-lg' %>
+    </div>
+  </div>
+</div>
+<% end %>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>

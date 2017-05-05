@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Grupo:</strong>
+  <%= @resposta.grupo %>
+</p>
+
+<p>
+  <strong>Resposta:</strong>
+  <%= @resposta.resposta %>
+</p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @resposta.peso %>
+</p>
+
+<%= link_to 'Edit', edit_resposta_path(@resposta) %> |
+<%= link_to 'Back', respostas_path %>

@@ -1,0 +1,60 @@
+<section id="title" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Escola de Dons 3D</h1>
+                <p>Descubra-Desenvolva-Demonstre</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="breadcrumb pull-right">
+									<% if usuario_signed_in? %>
+									  <li>
+									  <%= link_to('Sair do Sistema', destroy_usuario_session_path, :method => :delete) %>
+									  </li>
+									<% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!--/#title-->
+
+<section id="services">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12"><h4>Olá <%= current_usuario.nome_completo %></h4></div>
+  </div>
+  <div class="row">
+            <div class="col-sm-4">
+              <div class="media center">
+                <div class="media-body">
+                  <h3 class="media-heading">Meus Dados</h3>
+                  <p><%= image_tag("profile.png") %></p>
+                  <p>Informações Pessoais</p>
+                  <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="media center">
+                  <div class="media-body">
+                    <h3 class="media-heading">Meu Questionário</h3>
+                    <p><%= image_tag("checked.png") %></p>
+                    <p>Preencha o Caderno de Perguntas</p>
+                    <%= link_to "Começar o Teste", caderno_respostas_path, class: "btn btn-lg btn-warning btn-block" %>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="media center">
+                <div class="media-body">
+                  <h3 class="media-heading">Meus Dons</h3>
+                  <p><%= image_tag("view.png") %></p>
+                  <p>Consulte os seus dons</p>
+                  <%= link_to "Consultar meus Dons", validar_processar_resultados_path, class: "btn btn-lg btn-warning btn-block" %>
+                </div>
+              </div>
+            </div>
+  </div>
+    </div>
+</section>

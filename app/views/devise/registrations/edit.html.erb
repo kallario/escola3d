@@ -1,0 +1,76 @@
+<section id="title" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Escola de Dons 3D</h1>
+                <p>Descubra-Desenvolva-Demonstre</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="breadcrumb pull-right">
+									<% if usuario_signed_in? %>
+									  <li>
+									  <%= link_to('Sair do Sistema', destroy_usuario_session_path, :method => :delete) %>
+									  </li>
+									<% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!--/#title-->
+
+<section id="services">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+  <div class="row">
+        <div class="col-sm-12">
+          <div>
+<h2>Meus Dados</h2>
+</div>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-inputs">
+    <%= f.input :nome_completo, label: 'Nome Completo', class: "input-xlarge" %>
+    <p class="help-block">Informe o seu nome completo</p>
+    <%= f.input :endereco, label: 'Endereço' %>
+    <p class="help-block">Informe o seu endereço completo</p>
+    <%= f.input :bairro, label: 'Bairro', class: "input-medium" %>
+    <p class="help-block">Informe o nome do bairro</p>
+    <%= f.input :cidade, label: 'Cidade' %>
+    <p class="help-block">Informe o nome da cidade</p>
+    <%= f.input :estado, label: 'Estado' %>
+    <p class="help-block">Informe o estado</p>
+    <%= f.input :nascimento,  label: 'Data de Nascimento', as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year - 10, discard_day: false,
+                              order: [:day, :month, :year] %>
+    <p class="help-block">Informe a data de nascimento</p>
+    <%= f.input :telefone, label: 'Telefone' %>
+    <p class="help-block">Informe o telefone</p>
+  </div>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="form-actions">
+      <%= f.button :submit, "Atualizar", class: 'btn btn-success btn-lg' %>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="form-actions">
+      <%= link_to "Voltar", :back, class: 'btn btn-warning btn-lg' %>
+    </div>
+  </div>
+</div>
+<% end %>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Perguntas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Grupo</th>
+      <th>Titulo pergunta</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @perguntas.each do |pergunta| %>
+      <tr>
+        <td><%= pergunta.grupo %></td>
+        <td><%= pergunta.titulo_pergunta %></td>
+        <td><%= link_to 'Show', pergunta %></td>
+        <td><%= link_to 'Edit', edit_pergunta_path(pergunta) %></td>
+        <td><%= link_to 'Destroy', pergunta, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pergunta', new_pergunta_path %>

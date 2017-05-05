@@ -1,0 +1,71 @@
+<section id="title" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Escola de Dons 3D</h1>
+                <p>Descubra-Desenvolva-Demonstre</p>
+            </div>
+            <div class="col-sm-6">
+                <ul class="breadcrumb pull-right">
+									<% if usuario_signed_in? %>
+									  <li>
+									  <%= link_to('Sair do Sistema', destroy_usuario_session_path, :method => :delete) %>
+									  </li>
+									<% end %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section><!--/#title-->
+
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+
+         <p id="notice"><%= notice %></p>
+
+         <h1>Caderno de Respostas</h1>
+
+          <br><br>
+
+          <div class="digg_pagination">
+              <%= will_paginate @caderno_respostas, :container => false %>
+              <div class='col-md-2'>
+                <%= link_to 'Voltar', root_path, class: 'btn btn-danger' %>
+              </div>
+          </div>
+
+          <br><br>
+
+          <table class='table table-striped'>
+            <thead>
+              <tr>
+                <th>Perguntas</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @caderno_respostas.each do |caderno| %>
+                <tr>
+                  <td><%= caderno.pergunta_id %> <%= caderno.pergunta.grupo.titulo_grupo %> <%= caderno.pergunta.titulo_pergunta %></td>
+                  <td>
+                    <%= if caderno.resposta.blank?
+                           link_to 'Responder', edit_caderno_resposta_path(caderno), class: 'btn btn-success'
+                        else
+                           link_to 'Respondido', '', class: 'btn btn-default'
+                        end %>
+                  </td>
+                </tr>
+              <% end %>
+
+            </tbody>
+          </table>
+
+          <br>
+
+      </div>
+    </div>
+  </div>
+</section>
