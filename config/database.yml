@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: escola3d_production
-  username: escola3d
-  password: <%= ENV['ESCOLA3D_DATABASE_PASSWORD'] %>
+  username: luiz
+  password: 16031973

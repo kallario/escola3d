@@ -21,7 +21,7 @@ class CadernoRespostasController < ApplicationController
   def update
     respond_to do |format|
       if @caderno_resposta.update(caderno_resposta_params)
-        format.html { redirect_to caderno_respostas_path, notice: 'Dupla was successfully updated.' }
+        format.html { redirect_to caderno_respostas_path, notice: 'Pergunta Respondida com sucesso.' }
         format.json { render :show, status: :ok, location: @caderno_resposta }
       else
         format.html { render :edit }

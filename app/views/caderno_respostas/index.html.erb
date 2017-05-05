@@ -23,7 +23,11 @@
     <div class="row">
       <div class="col-sm-12">
 
-         <p id="notice"><%= notice %></p>
+         <% if notice %>
+           <div class='alert alert-warning'>
+              <p id="notice"><%= notice %></p>
+           </div>
+         <% end %>
 
          <h1>Caderno de Respostas</h1>
 

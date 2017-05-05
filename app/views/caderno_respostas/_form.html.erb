@@ -13,9 +13,14 @@
 
       <br><br>
 
-      <div class="actions">
-        <%= f.submit "Responder" %>
+      <div class="col-md-3">
+        <%= f.submit "Responder", class: 'btn btn-success btn-lg' %>
       </div>
+
+      <div class="col-md-3">
+        <%= link_to "Voltar", caderno_respostas_path, class: 'btn  btn-danger btn-lg' %>
+      </div>
+
 
 
 <% end %>

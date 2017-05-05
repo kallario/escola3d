@@ -52,8 +52,8 @@ class ProcessarResultadosController < ApplicationController
   end
 
   def show
-    @resultados_manifestos = Resultado.where(tipo:1).order(valor: :desc).limit 5
-    @resultados_latentes = Resultado.where(tipo:2).order(valor: :desc).limit 5
+    @resultados_manifestos = Resultado.where(usuario_id: current_usuario.id, tipo:1).order(valor: :desc).limit 5
+    @resultados_latentes = DonsLatente.where(usuario_id: current_usuario.id).order(valor: :desc).limit 5
   end
 
 end
