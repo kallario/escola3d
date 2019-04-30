@@ -1,0 +1,186 @@
+I, [2019-04-29T18:59:06.532262 #5184]  INFO -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf] Started GET "/" for 45.225.128.59 at 2019-04-29 18:59:06 +0000
+I, [2019-04-29T18:59:06.546681 #5184]  INFO -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf] Processing by WelcomeController#index as HTML
+D, [2019-04-29T18:59:06.571647 #5184] DEBUG -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf]   [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T18:59:06.585807 #5184]  INFO -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T18:59:06.619179 #5184]  INFO -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf]   Rendered welcome/index.html.erb within layouts/application (33.2ms)
+I, [2019-04-29T18:59:06.619458 #5184]  INFO -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf] Completed 500 Internal Server Error in 73ms (ActiveRecord: 6.7ms)
+F, [2019-04-29T18:59:06.620180 #5184] FATAL -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf]   
+F, [2019-04-29T18:59:06.620232 #5184] FATAL -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x00000004b397d8>:0x00000004b436e8>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T18:59:06.620380 #5184] FATAL -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[cfdddda5-1251-43ce-877a-4fa67e8aecaf]     31:                   <p><%= image_tag("profile.png") %></p>
+[cfdddda5-1251-43ce-877a-4fa67e8aecaf]     32:                   <p>Informações Pessoais</p>
+[cfdddda5-1251-43ce-877a-4fa67e8aecaf]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[cfdddda5-1251-43ce-877a-4fa67e8aecaf]     34:                 </div>
+[cfdddda5-1251-43ce-877a-4fa67e8aecaf]     35:               </div>
+[cfdddda5-1251-43ce-877a-4fa67e8aecaf]     36:             </div>
+F, [2019-04-29T18:59:06.620405 #5184] FATAL -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf]   
+F, [2019-04-29T18:59:06.620425 #5184] FATAL -- : [cfdddda5-1251-43ce-877a-4fa67e8aecaf] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb__4360610625148378278_39387820'
+I, [2019-04-29T19:00:03.908107 #5491]  INFO -- : [a82f6252-6a44-496c-89e5-cff7c6db981e] Started GET "/usuarios/sign_in" for 45.225.128.59 at 2019-04-29 19:00:03 +0000
+I, [2019-04-29T19:00:03.921144 #5491]  INFO -- : [a82f6252-6a44-496c-89e5-cff7c6db981e] Processing by Devise::SessionsController#new as HTML
+D, [2019-04-29T19:00:03.950408 #5491] DEBUG -- : [a82f6252-6a44-496c-89e5-cff7c6db981e]   [1m[36mUsuario Load (1.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:04.036305 #5491]  INFO -- : [a82f6252-6a44-496c-89e5-cff7c6db981e] Redirected to http://dons.minhaigreja.ml/
+I, [2019-04-29T19:00:04.036509 #5491]  INFO -- : [a82f6252-6a44-496c-89e5-cff7c6db981e] Filter chain halted as :require_no_authentication rendered or redirected
+I, [2019-04-29T19:00:04.036693 #5491]  INFO -- : [a82f6252-6a44-496c-89e5-cff7c6db981e] Completed 302 Found in 115ms (ActiveRecord: 9.6ms)
+I, [2019-04-29T19:00:04.177346 #5491]  INFO -- : [1cc28444-bc91-45b4-ae76-df31223636fb] Started GET "/" for 45.225.128.59 at 2019-04-29 19:00:04 +0000
+I, [2019-04-29T19:00:04.180948 #5491]  INFO -- : [1cc28444-bc91-45b4-ae76-df31223636fb] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:00:04.184933 #5491] DEBUG -- : [1cc28444-bc91-45b4-ae76-df31223636fb]   [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:04.190434 #5491]  INFO -- : [1cc28444-bc91-45b4-ae76-df31223636fb]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:00:04.226929 #5491]  INFO -- : [1cc28444-bc91-45b4-ae76-df31223636fb]   Rendered welcome/index.html.erb within layouts/application (36.3ms)
+I, [2019-04-29T19:00:04.227214 #5491]  INFO -- : [1cc28444-bc91-45b4-ae76-df31223636fb] Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.5ms)
+F, [2019-04-29T19:00:04.227941 #5491] FATAL -- : [1cc28444-bc91-45b4-ae76-df31223636fb]   
+F, [2019-04-29T19:00:04.227986 #5491] FATAL -- : [1cc28444-bc91-45b4-ae76-df31223636fb] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x000000052a87a8>:0x000000052b3040>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:00:04.228107 #5491] FATAL -- : [1cc28444-bc91-45b4-ae76-df31223636fb]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[1cc28444-bc91-45b4-ae76-df31223636fb]     31:                   <p><%= image_tag("profile.png") %></p>
+[1cc28444-bc91-45b4-ae76-df31223636fb]     32:                   <p>Informações Pessoais</p>
+[1cc28444-bc91-45b4-ae76-df31223636fb]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[1cc28444-bc91-45b4-ae76-df31223636fb]     34:                 </div>
+[1cc28444-bc91-45b4-ae76-df31223636fb]     35:               </div>
+[1cc28444-bc91-45b4-ae76-df31223636fb]     36:             </div>
+F, [2019-04-29T19:00:04.228128 #5491] FATAL -- : [1cc28444-bc91-45b4-ae76-df31223636fb]   
+F, [2019-04-29T19:00:04.228142 #5491] FATAL -- : [1cc28444-bc91-45b4-ae76-df31223636fb] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___2240451092129811992_43338040'
+I, [2019-04-29T19:00:05.290200 #5491]  INFO -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474] Started GET "/" for 45.225.128.59 at 2019-04-29 19:00:05 +0000
+I, [2019-04-29T19:00:05.290976 #5491]  INFO -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:00:05.293590 #5491] DEBUG -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]   [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:05.295637 #5491]  INFO -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:00:05.339612 #5491]  INFO -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]   Rendered welcome/index.html.erb within layouts/application (43.8ms)
+I, [2019-04-29T19:00:05.339898 #5491]  INFO -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474] Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.7ms)
+F, [2019-04-29T19:00:05.340847 #5491] FATAL -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]   
+F, [2019-04-29T19:00:05.340893 #5491] FATAL -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x000000052a87a8>:0x00000005440958>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:00:05.341041 #5491] FATAL -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]     31:                   <p><%= image_tag("profile.png") %></p>
+[5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]     32:                   <p>Informações Pessoais</p>
+[5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]     34:                 </div>
+[5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]     35:               </div>
+[5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]     36:             </div>
+F, [2019-04-29T19:00:05.341070 #5491] FATAL -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474]   
+F, [2019-04-29T19:00:05.341106 #5491] FATAL -- : [5936ffe2-70d7-4f04-b9ab-f0cbcb3a1474] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___2240451092129811992_43338040'
+I, [2019-04-29T19:00:06.022012 #5491]  INFO -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f] Started GET "/" for 45.225.128.59 at 2019-04-29 19:00:06 +0000
+I, [2019-04-29T19:00:06.023178 #5491]  INFO -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:00:06.026296 #5491] DEBUG -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f]   [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:06.027793 #5491]  INFO -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:00:06.068553 #5491]  INFO -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f]   Rendered welcome/index.html.erb within layouts/application (40.6ms)
+I, [2019-04-29T19:00:06.068742 #5491]  INFO -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f] Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.6ms)
+F, [2019-04-29T19:00:06.069339 #5491] FATAL -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f]   
+F, [2019-04-29T19:00:06.069381 #5491] FATAL -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x000000052a87a8>:0x000000055b5ce8>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:00:06.069478 #5491] FATAL -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[1fa43e68-ae70-4405-95bb-e940f9e3c41f]     31:                   <p><%= image_tag("profile.png") %></p>
+[1fa43e68-ae70-4405-95bb-e940f9e3c41f]     32:                   <p>Informações Pessoais</p>
+[1fa43e68-ae70-4405-95bb-e940f9e3c41f]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[1fa43e68-ae70-4405-95bb-e940f9e3c41f]     34:                 </div>
+[1fa43e68-ae70-4405-95bb-e940f9e3c41f]     35:               </div>
+[1fa43e68-ae70-4405-95bb-e940f9e3c41f]     36:             </div>
+F, [2019-04-29T19:00:06.069497 #5491] FATAL -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f]   
+F, [2019-04-29T19:00:06.069511 #5491] FATAL -- : [1fa43e68-ae70-4405-95bb-e940f9e3c41f] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___2240451092129811992_43338040'
+I, [2019-04-29T19:00:06.696349 #5491]  INFO -- : [450ce260-9c38-46d8-9d5d-b699d9501670] Started GET "/" for 45.225.128.59 at 2019-04-29 19:00:06 +0000
+I, [2019-04-29T19:00:06.697167 #5491]  INFO -- : [450ce260-9c38-46d8-9d5d-b699d9501670] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:00:06.699686 #5491] DEBUG -- : [450ce260-9c38-46d8-9d5d-b699d9501670]   [1m[36mUsuario Load (0.6ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:06.700822 #5491]  INFO -- : [450ce260-9c38-46d8-9d5d-b699d9501670]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:00:06.733757 #5491]  INFO -- : [450ce260-9c38-46d8-9d5d-b699d9501670]   Rendered welcome/index.html.erb within layouts/application (32.7ms)
+I, [2019-04-29T19:00:06.733979 #5491]  INFO -- : [450ce260-9c38-46d8-9d5d-b699d9501670] Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms)
+F, [2019-04-29T19:00:06.734536 #5491] FATAL -- : [450ce260-9c38-46d8-9d5d-b699d9501670]   
+F, [2019-04-29T19:00:06.734561 #5491] FATAL -- : [450ce260-9c38-46d8-9d5d-b699d9501670] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x000000052a87a8>:0x007f41215e2ce8>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:00:06.734664 #5491] FATAL -- : [450ce260-9c38-46d8-9d5d-b699d9501670]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[450ce260-9c38-46d8-9d5d-b699d9501670]     31:                   <p><%= image_tag("profile.png") %></p>
+[450ce260-9c38-46d8-9d5d-b699d9501670]     32:                   <p>Informações Pessoais</p>
+[450ce260-9c38-46d8-9d5d-b699d9501670]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[450ce260-9c38-46d8-9d5d-b699d9501670]     34:                 </div>
+[450ce260-9c38-46d8-9d5d-b699d9501670]     35:               </div>
+[450ce260-9c38-46d8-9d5d-b699d9501670]     36:             </div>
+F, [2019-04-29T19:00:06.734684 #5491] FATAL -- : [450ce260-9c38-46d8-9d5d-b699d9501670]   
+F, [2019-04-29T19:00:06.734698 #5491] FATAL -- : [450ce260-9c38-46d8-9d5d-b699d9501670] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___2240451092129811992_43338040'
+I, [2019-04-29T19:00:06.993887 #5491]  INFO -- : [cbde2da0-954f-4b55-8369-222f7eba305a] Started GET "/" for 45.225.128.59 at 2019-04-29 19:00:06 +0000
+I, [2019-04-29T19:00:06.995124 #5491]  INFO -- : [cbde2da0-954f-4b55-8369-222f7eba305a] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:00:06.998426 #5491] DEBUG -- : [cbde2da0-954f-4b55-8369-222f7eba305a]   [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:07.000584 #5491]  INFO -- : [cbde2da0-954f-4b55-8369-222f7eba305a]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:00:07.035271 #5491]  INFO -- : [cbde2da0-954f-4b55-8369-222f7eba305a]   Rendered welcome/index.html.erb within layouts/application (34.5ms)
+I, [2019-04-29T19:00:07.035458 #5491]  INFO -- : [cbde2da0-954f-4b55-8369-222f7eba305a] Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.7ms)
+F, [2019-04-29T19:00:07.035981 #5491] FATAL -- : [cbde2da0-954f-4b55-8369-222f7eba305a]   
+F, [2019-04-29T19:00:07.036012 #5491] FATAL -- : [cbde2da0-954f-4b55-8369-222f7eba305a] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x000000052a87a8>:0x007f412181b500>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:00:07.036114 #5491] FATAL -- : [cbde2da0-954f-4b55-8369-222f7eba305a]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[cbde2da0-954f-4b55-8369-222f7eba305a]     31:                   <p><%= image_tag("profile.png") %></p>
+[cbde2da0-954f-4b55-8369-222f7eba305a]     32:                   <p>Informações Pessoais</p>
+[cbde2da0-954f-4b55-8369-222f7eba305a]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[cbde2da0-954f-4b55-8369-222f7eba305a]     34:                 </div>
+[cbde2da0-954f-4b55-8369-222f7eba305a]     35:               </div>
+[cbde2da0-954f-4b55-8369-222f7eba305a]     36:             </div>
+F, [2019-04-29T19:00:07.036135 #5491] FATAL -- : [cbde2da0-954f-4b55-8369-222f7eba305a]   
+F, [2019-04-29T19:00:07.036149 #5491] FATAL -- : [cbde2da0-954f-4b55-8369-222f7eba305a] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___2240451092129811992_43338040'
+I, [2019-04-29T19:00:07.241863 #5491]  INFO -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee] Started GET "/" for 45.225.128.59 at 2019-04-29 19:00:07 +0000
+I, [2019-04-29T19:00:07.242940 #5491]  INFO -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:00:07.245987 #5491] DEBUG -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee]   [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:07.247711 #5491]  INFO -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:00:07.280692 #5491]  INFO -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee]   Rendered welcome/index.html.erb within layouts/application (32.8ms)
+I, [2019-04-29T19:00:07.280901 #5491]  INFO -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee] Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms)
+F, [2019-04-29T19:00:07.281473 #5491] FATAL -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee]   
+F, [2019-04-29T19:00:07.281498 #5491] FATAL -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x000000052a87a8>:0x007f4121a57738>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:00:07.281592 #5491] FATAL -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[eb073d3f-65e0-44d3-92c3-3f163262f7ee]     31:                   <p><%= image_tag("profile.png") %></p>
+[eb073d3f-65e0-44d3-92c3-3f163262f7ee]     32:                   <p>Informações Pessoais</p>
+[eb073d3f-65e0-44d3-92c3-3f163262f7ee]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[eb073d3f-65e0-44d3-92c3-3f163262f7ee]     34:                 </div>
+[eb073d3f-65e0-44d3-92c3-3f163262f7ee]     35:               </div>
+[eb073d3f-65e0-44d3-92c3-3f163262f7ee]     36:             </div>
+F, [2019-04-29T19:00:07.281626 #5491] FATAL -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee]   
+F, [2019-04-29T19:00:07.281640 #5491] FATAL -- : [eb073d3f-65e0-44d3-92c3-3f163262f7ee] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___2240451092129811992_43338040'
+I, [2019-04-29T19:00:09.386663 #5491]  INFO -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c] Started GET "/" for 45.225.128.59 at 2019-04-29 19:00:09 +0000
+I, [2019-04-29T19:00:09.389218 #5491]  INFO -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:00:09.392569 #5491] DEBUG -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c]   [1m[36mUsuario Load (0.7ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:00:09.394335 #5491]  INFO -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:00:09.430028 #5491]  INFO -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c]   Rendered welcome/index.html.erb within layouts/application (35.5ms)
+I, [2019-04-29T19:00:09.430214 #5491]  INFO -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c] Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.7ms)
+F, [2019-04-29T19:00:09.430754 #5491] FATAL -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c]   
+F, [2019-04-29T19:00:09.430776 #5491] FATAL -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x000000052a87a8>:0x007f4121c920c0>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:00:09.430872 #5491] FATAL -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[fcdcc4bc-d341-4c89-a1b5-67939a42be6c]     31:                   <p><%= image_tag("profile.png") %></p>
+[fcdcc4bc-d341-4c89-a1b5-67939a42be6c]     32:                   <p>Informações Pessoais</p>
+[fcdcc4bc-d341-4c89-a1b5-67939a42be6c]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[fcdcc4bc-d341-4c89-a1b5-67939a42be6c]     34:                 </div>
+[fcdcc4bc-d341-4c89-a1b5-67939a42be6c]     35:               </div>
+[fcdcc4bc-d341-4c89-a1b5-67939a42be6c]     36:             </div>
+F, [2019-04-29T19:00:09.430900 #5491] FATAL -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c]   
+F, [2019-04-29T19:00:09.430915 #5491] FATAL -- : [fcdcc4bc-d341-4c89-a1b5-67939a42be6c] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___2240451092129811992_43338040'
+I, [2019-04-29T19:01:45.204660 #5688]  INFO -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb] Started GET "/" for 45.225.128.59 at 2019-04-29 19:01:45 +0000
+I, [2019-04-29T19:01:45.215833 #5688]  INFO -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb] Processing by WelcomeController#index as HTML
+D, [2019-04-29T19:01:45.241610 #5688] DEBUG -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]   [1m[36mUsuario Load (0.5ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 ORDER BY "usuarios"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2019-04-29T19:01:45.256529 #5688]  INFO -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]   Rendering welcome/index.html.erb within layouts/application
+I, [2019-04-29T19:01:45.290649 #5688]  INFO -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]   Rendered welcome/index.html.erb within layouts/application (34.0ms)
+I, [2019-04-29T19:01:45.290891 #5688]  INFO -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb] Completed 500 Internal Server Error in 75ms (ActiveRecord: 6.6ms)
+F, [2019-04-29T19:01:45.291523 #5688] FATAL -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]   
+F, [2019-04-29T19:01:45.291558 #5688] FATAL -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb] ActionView::Template::Error (undefined local variable or method `edit_usuario_registration_path' for #<#<Class:0x00000003ddbfa0>:0x00000003dd8508>
+Did you mean?  edit_registration_path
+               edit_usuario_password_path
+               edit_view_registration_path):
+F, [2019-04-29T19:01:45.291668 #5688] FATAL -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]     30:                   <h3 class="media-heading">Meus Dados</h3>
+[b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]     31:                   <p><%= image_tag("profile.png") %></p>
+[b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]     32:                   <p>Informações Pessoais</p>
+[b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]     33:                   <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+[b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]     34:                 </div>
+[b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]     35:               </div>
+[b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]     36:             </div>
+F, [2019-04-29T19:01:45.291686 #5688] FATAL -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb]   
+F, [2019-04-29T19:01:45.291708 #5688] FATAL -- : [b8d0ba8a-99a0-487a-9c6f-8f39fc96f7bb] app/views/welcome/index.html.erb:33:in `_app_views_welcome_index_html_erb___1401092273442742900_32404200'

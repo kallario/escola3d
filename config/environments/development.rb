@@ -31,7 +31,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { :host => "aplicativodacidade.com:3000" }
+  config.action_mailer.default_url_options = { :host => "dons.minhaigreja.ml:3000" }
 
   config.action_mailer.delivery_method = :smtp
 
@@ -41,8 +41,8 @@ Rails.application.configure do
   domain: 'in-v3.mailjet.com',
   authentication: 'plain',
   enable_starttls_auto: true,
-  user_name: '77d6c05bcc175525b236079f623ef45b',
-  password: '2c1e6061cfb422934d8477aa990876ce'
+  user_name: ENV['USER_MAILJET'],
+  password: ENV['PASS_MAILJET']
   }
 
   # Print deprecation notices to the Rails logger.

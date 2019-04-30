@@ -71,3 +71,7 @@ gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 
 gem 'will_paginate', '~> 3.1.0'
+
+gem 'activeadmin'
+
+gem "active_admin_import" , '3.0.0'

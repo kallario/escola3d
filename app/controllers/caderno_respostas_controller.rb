@@ -21,7 +21,12 @@ class CadernoRespostasController < ApplicationController
   def update
     respond_to do |format|
       if @caderno_resposta.update(caderno_resposta_params)
-        format.html { redirect_to caderno_respostas_path, notice: 'Pergunta Respondida com sucesso.' }
+        if @caderno_resposta.pergunta_id < 210
+          @caderno_resposta = CadernoResposta.find_by(pergunta_id: caderno_resposta_params[:pergunta_id].to_i + 1)
+          format.html { redirect_to edit_caderno_resposta_path(@caderno_resposta), notice: 'Pergunta Respondida com sucesso.' }
+        else
+          format.html { redirect_to caderno_respostas_path, notice: 'Pergunta Respondida com sucesso.' }
+        end
         format.json { render :show, status: :ok, location: @caderno_resposta }
       else
         format.html { render :edit }
