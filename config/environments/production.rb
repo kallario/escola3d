@@ -59,7 +59,7 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.default_url_options = { :host => "dons.minhaigreja.ml" }
+  config.action_mailer.default_url_options = { :host => "dons.soumaisigreja.com" }
 
   config.action_mailer.delivery_method = :smtp
 
@@ -69,8 +69,8 @@ Rails.application.configure do
   domain: 'in-v3.mailjet.com',
   authentication: 'plain',
   enable_starttls_auto: true,
-  user_name: ENV['USER_MAILJET'],
-  password: ENV['PASS_MAILJET']
+  user_name: "9e23c996228ab60586bc4a997cea8d1e",
+  password: "36c84a2964eb5096fb73140fe72b5097"
   }
 
 
@@ -99,5 +99,5 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+  config.active_record.dump_schema_after_migration = true
 end

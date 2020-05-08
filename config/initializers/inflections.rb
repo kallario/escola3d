@@ -58,6 +58,10 @@ ActiveSupport::Inflector.inflections do |inflect|
 
   # Irregulares
   inflect.irregular "país", "países"
-  inflect.irregular "user", "users"
-  inflect.irregular "dom", "dons"
+
+  inflect.irregular "admin", "admins"
+
+  inflect.irregular "admin_user", "admin_users"  
+
+  inflect.irregular "pergunta", "perguntas"
 end

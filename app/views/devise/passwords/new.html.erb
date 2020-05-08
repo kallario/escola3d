@@ -1,11 +1,40 @@
-<div class="login-page">
-  <div class="form">
-    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= devise_error_messages! %>
-      <%= f.email_field :email, autofocus: true, placeholder: 'Informe seu email' %>
-      <%= f.submit "Recuperar Senha" %>
-    <% end %>
+<section id="services">
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+  <div class="row">
+        <div class="col-sm-12">
+          <div>
+				<h2>Esqueci a senha.</h2>
+				<br>
+
+				<% if notice.present? %>
+				    <p id="notice"><div class="alert alert-warning" role="alert"><%= notice %></div></p>
+				<% end %>
+
+				</div>
+
+				<div class="login-page">
+				  <div class="form">
+				    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+				      <%= devise_error_messages! %>
+				      <%= f.email_field :email, autofocus: true, placeholder: 'Informe seu email', class: "form-control" %>
+				      <br><br>
+				      <%= f.submit "Recuperar Senha", class: 'btn btn-primary btn-lg' %>
+				    <% end %>
+				  </div>
+				</div>
+
+		</div>
   </div>
+
+ 
+</div>
 </div>
 
-<%= render "devise/shared/links" %>
+</div>
+</div>
+</div>
+</section>
+

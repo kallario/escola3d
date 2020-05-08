@@ -1,20 +1,9 @@
-<section id="title" class="midnight-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1>Escola de Dons 3D</h1>
-                <p>Descubra-Desenvolva-Demonstre</p>
-            </div>
-        </div>
-    </div>
-</section><!--/#title-->
-
 <section id="services" class="wisteria">
 		<div class="container">
 			<div class="row">
           <div class="col-sm-8">
   					<div class="row">
-    						<div class="col-md-6 col-sm-6">
+    						<div class="col-md-6 col-sm-6" id="optionalstuff">
     							<div class="media">
     								<div class="media-body">
     									<h3 class="media-heading">Bem-vindo</h3>
@@ -25,7 +14,7 @@ O que vai acontecer se os ministérios  da minha igreja forem orientados pelos d
     								</div>
     							</div>
     						</div><!--/.col-md-6-->
-    						<div class="col-md-6 col-sm-6">
+    						<div class="col-md-6 col-sm-6"  id="optionalstuff">
     							<div class="media">
     								<div class="media-body">
     									<h3 class="media-heading">Apresentação dos Dons</h3>
@@ -54,7 +43,7 @@ O que vai acontecer se os ministérios  da minha igreja forem orientados pelos d
   						</div><!--/.col-md-6-->
   					</div>
   					<div class="row">
-  						<div class="col-md-6 col-sm-6">
+  						<div class="col-md-6 col-sm-6" id="optionalstuff">
   							<div class="media">
   								<div class="media-body">
   									<h3 class="media-heading">Manual do Usuário</h3>
@@ -63,11 +52,11 @@ O que vai acontecer se os ministérios  da minha igreja forem orientados pelos d
   								</div>
   							</div>
   						</div><!--/.col-md-6-->
-  						<div class="col-md-6 col-sm-6">
+  						<div class="col-md-6 col-sm-6" id="optionalstuff">
   							<div class="media">
   								<div class="media-body">
   									<h3 class="media-heading">Primeiro Acesso</h3>
-  									<p>Para acessar o sistema você precisa estar cadastrado na Escola de Dons da sua igreja.</p>
+  									<p>Para acessar o sistema você precisa matricular-se. Será necessário informar o código da turma, solicite-o na secretaria da igreja.</p>
   									<br>
   								</div>
   							</div>
@@ -75,7 +64,7 @@ O que vai acontecer se os ministérios  da minha igreja forem orientados pelos d
   					</div>
         </div>
 
-				<div class="col-sm-4">
+				<div class="col-md-4 col-sm-12">
 
               <div class="col-sm-12 form-box">
                     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -84,18 +73,20 @@ O que vai acontecer se os ministérios  da minha igreja forem orientados pelos d
                       <h3>Entrar no Sistema</h3>
 
               				<div class="control-group">
-                        <%= f.email_field :email, autofocus: true, class: 'form-input', placeholder: 'Informe o seu email' %>
+                        <%= f.email_field :email, autofocus: true, class: 'form-control form-control-lg', placeholder: 'Informe o seu email' %>
               				</div>
 
               				<div class="control-group">
-                        <%= f.password_field :password, autocomplete: "off", class: 'form-input', placeholder: 'Informe a sua senha' %>
+                        <%= f.password_field :password, autocomplete: "off", class: 'form-control form-control-lg', placeholder: 'Informe a sua senha' %>
               				</div>
 
                       <div class="control-group">
               				   <%= f.submit "Entrar", class: 'btn btn-lg' %>
                       </div>
 
+                      <center>
                       <%= render "devise/shared/links" %>
+                      </center>
 
               			</div>
 

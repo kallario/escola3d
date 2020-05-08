@@ -1,4 +1,4 @@
-class CreateCadernoRespostas < ActiveRecord::Migration[5.0]
+class CreateCadernoRespostas < ActiveRecord::Migration[5.2]
   def change
     create_table :caderno_respostas do |t|
       t.references :usuario, foreign_key: true

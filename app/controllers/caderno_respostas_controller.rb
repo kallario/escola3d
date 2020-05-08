@@ -2,7 +2,19 @@ class CadernoRespostasController < ApplicationController
   before_action :set_caderno_resposta, only: [:show, :edit, :update, :destroy]
 
   def index
-    @caderno_respostas = CadernoResposta.where('usuario_id = ?',current_usuario).paginate(:page => params[:page]).order(:pergunta_id)
+
+    @usuario = Usuario.find(current_usuario.id)
+    @turma = Turma.find(@usuario.turma_id)
+
+    if @turma.questionario > 0 and @turma.questionario < 8
+      @offset = (@turma.questionario - 1) * 30
+    else
+      redirect_to aguardando_path, notice: 'Questionário ainda não está liberado.'
+      return
+    end
+
+    @caderno_respostas = CadernoResposta.where('usuario_id = ?',current_usuario.id).order(:pergunta_id).page(params[:page]).limit(30).offset(@offset)
+
     if @caderno_respostas.count <= 0
       @perguntas = Pergunta.all
       @perguntas.each do |pergunta|
@@ -19,20 +31,23 @@ class CadernoRespostasController < ApplicationController
   end
 
   def update
+
+    @usuario = Usuario.find(current_usuario.id)
+    @turma = Turma.find(@usuario.turma_id)
+    @questionario = @turma.questionario * 30      
+
     respond_to do |format|
-      if @caderno_resposta.update(caderno_resposta_params)
-        if @caderno_resposta.pergunta_id < 210
-          @caderno_resposta = CadernoResposta.find_by(pergunta_id: caderno_resposta_params[:pergunta_id].to_i + 1)
-          format.html { redirect_to edit_caderno_resposta_path(@caderno_resposta), notice: 'Pergunta Respondida com sucesso.' }
-        else
+
+        @pergunta = @caderno_resposta.pergunta
+
+        if @caderno_resposta.update(caderno_resposta_params)
           format.html { redirect_to caderno_respostas_path, notice: 'Pergunta Respondida com sucesso.' }
+        else
+          format.html { render :edit }
         end
-        format.json { render :show, status: :ok, location: @caderno_resposta }
-      else
-        format.html { render :edit }
-        format.json { render json: @caderno_resposta.errors, status: :unprocessable_entity }
-      end
+
     end
+
   end
 
   private

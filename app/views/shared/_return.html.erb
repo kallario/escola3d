@@ -1,0 +1,7 @@
+<% if current_usuario.turma.curso.sigla = 'ED' %>
+  <%= link_to 'Voltar', escola_dons_path, class: 'btn btn-warning btn-lg' %>
+<% elsif current_usuario.turma.curso.sigla = 'UV' %>
+  <%= link_to 'Voltar', escola_dons_path, class: 'btn btn-warning btn-lg' %>
+<% elsif current_usuario.turma.curso.sigla = 'PF' %>
+  <%= link_to 'Voltar', escola_dons_path, class: 'btn btn-warning btn-lg' %>                    
+<% end %>

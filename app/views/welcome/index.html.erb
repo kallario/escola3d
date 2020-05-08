@@ -1,60 +1,54 @@
-<section id="title" class="midnight-blue">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <h1>Escola de Dons 3D</h1>
-                <p>Descubra-Desenvolva-Demonstre</p>
-            </div>
-            <div class="col-sm-6">
-                <ul class="breadcrumb pull-right">
-									<% if usuario_signed_in? %>
-									  <li>
-									  <%= link_to('Sair do Sistema', destroy_usuario_session_path, :method => :delete) %>
-									  </li>
-									<% end %>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section><!--/#title-->
-
 <section id="services">
 <div class="container">
   <div class="row">
-    <div class="col-sm-12"><h4>Olá <%= current_usuario.nome_completo %></h4></div>
+    <div class="col-sm-12"><h4>Olá <%= current_usuario.nome_completo %>, atualize seus dados <%= link_to "aqui", edit_usuario_registration_path(id: current_usuario.id) %></h4></div>
   </div>
   <div class="row">
+
             <div class="col-sm-4">
               <div class="media center">
                 <div class="media-body">
-                  <h3 class="media-heading">Meus Dados</h3>
-                  <p><%= image_tag("profile.png") %></p>
-                  <p>Informações Pessoais</p>
-                  <%= link_to "Meus Dados", edit_usuario_registration_path, class: "btn btn-lg btn-warning btn-block" %>
+                  <h3 class="media-heading">Princípios da Fé</h3>
+                  <p><%= image_tag("principios_fe.png") %></p>
+                  <p>Ora, a fé é o firme fundamento das coisas que se esperam, e a prova das coisas que se não vêem.</p>
+                  <% if current_usuario.turma.curso.sigla == 'PF' %>
+                      <%= link_to "Princípios da Fé", "#", class: "btn btn-lg btn-roxo btn-block" %>
+                  <% else %>
+                      <%= link_to "Princípios da Fé", "#", class: "btn btn-lg btn-roxo btn-block disabled" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="media center">
+                <div class="media-body">
+                  <h3 class="media-heading">Escola de Dons</h3>
+                  <p><%= image_tag("escola_dons.png") %></p>
+                  <p>A Escola de Dons irá te orientar e ensinar a identificar seus dons numa visão bíblica!</p>
+                  <% if current_usuario.turma.curso.sigla == 'ED' %>
+                      <%= link_to "Escola de Dons", escola_dons_path, class: "btn btn-lg btn-roxo btn-block" %>
+                  <% else %>
+                      <%= link_to "Escola de Dons", escola_dons_path, class: "btn btn-lg btn-roxo btn-block disabled" %>
+                  <% end %>
                 </div>
               </div>
             </div>
             <div class="col-sm-4">
                 <div class="media center">
                   <div class="media-body">
-                    <h3 class="media-heading">Meu Questionário</h3>
-                    <p><%= image_tag("checked.png") %></p>
-                    <p>Preencha o Caderno de Perguntas</p>
-                    <%= link_to "Começar o Teste", caderno_respostas_path, class: "btn btn-lg btn-warning btn-block" %>
+                    <h3 class="media-heading">Universidade da Vida</h3>
+                    <p><%= image_tag("universidade_vida.png") %></p>
+                    <p>A Universidade da Vida é um curso de nove semanas projetado para fortalecer o novo cristão na fé em Cristo. </p>
+                  <% if current_usuario.turma.curso.sigla == 'UV' %>
+                      <%= link_to "Universidade da Vida", "#", class: "btn btn-lg btn-roxo btn-block" %>
+                  <% else %>
+                      <%= link_to "Universidade da Vida", "#", class: "btn btn-lg btn-roxo btn-block disabled" %>
+                  <% end %>
                   </div>
                 </div>
             </div>
 
-            <div class="col-sm-4">
-              <div class="media center">
-                <div class="media-body">
-                  <h3 class="media-heading">Meus Dons</h3>
-                  <p><%= image_tag("view.png") %></p>
-                  <p>Consulte os seus dons</p>
-                  <%= link_to "Consultar meus Dons", validar_processar_resultados_path, class: "btn btn-lg btn-warning btn-block" %>
-                </div>
-              </div>
-            </div>
   </div>
     </div>
 </section>

@@ -1,0 +1,23 @@
+<section id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12"><h4>Olá <%= current_usuario.nome_completo %></h4></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <div class="media center">
+            <div class="media-body">
+              <h3 class="media-heading">O questionário ainda não está liberado!</h3>
+              <p><%= image_tag("wait.png") %></p>
+              <p>Aguarde o início das aulas.</p>
+              <%= render 'shared/return' %>                
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+        </div>        
+    </div>
+  </div>
+</section>

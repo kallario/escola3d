@@ -1,30 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Escola de Dons 3D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Escolas Projeto Vida</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   	<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
   	<link rel="stylesheet" href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css"/>
-
-    <!--[if !IE]><!-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<![endif]-->
-      
+    <%= javascript_include_tag Ckeditor.cdn_url %>
+     
   </head>
 
   <body>
 
+  
+	<script>
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : '221414095940273',
+	      cookie     : true,
+	      xfbml      : true,
+	      version    : 'v6.0'
+	    });
+	      
+	    FB.AppEvents.logPageView();   
+	      
+	  };
 
-    <%= yield %>
+	  (function(d, s, id){
+	     var js, fjs = d.getElementsByTagName(s)[0];
+	     if (d.getElementById(id)) {return;}
+	     js = d.createElement(s); js.id = id;
+	     js.src = "https://connect.facebook.net/en_US/sdk.js";
+	     fjs.parentNode.insertBefore(js, fjs);
+	   }(document, 'script', 'facebook-jssdk'));
+	</script>
 
-    <footer id="footer" class="midnight-blue">
+    <section id="title" class="midnight-blue">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2017 <a target="_blank" href="http://www.kallario.com.br" title="Desenvolvimento de Sistemas">Kalla Rio Tecnologia</a>. Todos os direitos reservados.
+                    <h1>Escolas Projeto Vida</h1>
+                    <p>Prepare-se para viver os melhores dias da sua vida</p>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="breadcrumb pull-right">
+                      <% if usuario_signed_in? %>
+                        <li>
+                        <%= link_to('Sair do Sistema', destroy_usuario_session_path, :method => :delete) %>
+                        </li>
+                      <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section><!--/#title-->  
+
+  	<%= yield %>
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2017 <a target="_blank" href="http://www.llkinformatica.com.br" title="Desenvolvimento de Sistemas">LLK Sistemas</a>. Todos os direitos reservados.
                 </div>
             </div>
         </div>

@@ -1,0 +1,3 @@
+class Igreja < ApplicationRecord
+
+end

@@ -1134,6 +1134,15 @@ margin-bottom: 10px;
 background-color: #ECF0F1;
 }
 
+.btn-roxo, .btn-roxo:active, .btn-roxo:visited {
+    background-color: #3d1b4f !important;
+}
+
+.btn-roxo:hover {
+    background-color: #3e409e !important;
+    color: #fff !important;
+}
+
 .btn {
   border: 2px solid transparent;
   background: #3498DB;
@@ -1157,4 +1166,10 @@ background-color: #ECF0F1;
 
 #form-actions .btn {
   margin-left:10px;
+}
+
+@media (max-width:629px) {
+  div#optionalstuff {
+    display: none;
+  }
 }

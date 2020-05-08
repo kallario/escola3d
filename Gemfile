@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.2'
+gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'bootsnap', require: false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -51,27 +52,20 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'devise'
-
+gem 'cancan'
 gem 'bootstrap3-rails'
-
 gem 'momentjs-rails', '>= 2.9.0'
-
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
-
 gem 'simple_form'
-
 gem "font-awesome-rails"
-
 gem "flat-ui-rails"
-
 gem 'jquery-ui-rails'
-
 gem 'jquery-turbolinks'
-
-gem 'will_paginate', '~> 3.1.0'
-
+gem 'kaminari'
 gem 'activeadmin'
-
 gem "active_admin_import" , '3.0.0'
+gem 'recaptcha', require: 'recaptcha/rails'
+#gem 'apartment', '~> 1.0', '>= 1.0.2'
+gem 'oauth2'
+gem 'ckeditor', github: 'galetahub/ckeditor'

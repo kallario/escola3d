@@ -1,0 +1,17 @@
+<h1>Olá <%= @pessoa.nome_completo %></h1>
+
+<p>Parabéns, você se matriculou na <%= @pessoa.turma.curso.titulo %>. Agora você só precisa aguardar o início das aulas para acompanhar as lições online.</p>
+<p>Vamos precisar do ZOOM para as aulas. Você pode baixar no link abaixo para android e ios:</p>
+<p><a href='https://play.google.com/store/apps/details?id=us.zoom.videomeetings&hl=pt_BR'>Zoom Cloud Meetings para Android</a></p>
+<p><a href='https://apps.apple.com/br/app/zoom-cloud-meetings/id546505307'>Zoom Cloud Meetings para IOS</a></p>
+<br>
+<p>Sua turma é: <%= @pessoa.codigo_turma %> e as aulas começam no dia <%= @turma_inicio %>.
+
+<br>
+
+<p>Atenciosamente,</p>
+
+<center>
+<p>Pr. Luiz Cláudio de Castro Figueredo</p>
+<p>Escolas Projeto Vida de Mendes<br>
+</center>

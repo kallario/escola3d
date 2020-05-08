@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  codigo_turma: MyString
+  data_inicio: 2020-04-15
+  data_termino: 2020-04-15
+  data_formatura: 2020-04-15
+
+two:
+  codigo_turma: MyString
+  data_inicio: 2020-04-15
+  data_termino: 2020-04-15
+  data_formatura: 2020-04-15

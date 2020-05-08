@@ -1,18 +1,31 @@
 class ProcessarResultadosController < ApplicationController
   def validar
-    @caderno_resposta = CadernoResposta.where(usuario_id: current_usuario.id, resposta: nil).first
-    respond_to do |format|
-      if !@caderno_resposta.nil?
-        format.html { redirect_to caderno_respostas_path, notice: 'Preencha todo o caderno para ver o seu Dom.' }
-      else
-        @usuario = Usuario.find(current_usuario.id)
-        if @usuario.processado == 0
-          format.html { redirect_to processar_processar_resultados_path }
+    if CadernoResposta.exists?(usuario_id: current_usuario.id)
+      valido = true
+      @caderno_resposta = CadernoResposta.where(usuario_id: current_usuario.id, resposta: nil).first
+      respond_to do |format|
+        if !@caderno_resposta.nil?
+          format.html { redirect_to caderno_respostas_path, notice: 'Preencha todo o caderno para ver o seu Dom.' }
         else
-          format.html { redirect_to show_processar_resultados_path, notice: 'Carregando os dons' }
+          @usuario = Usuario.find(current_usuario.id)
+          if @usuario.processado == 0
+            format.html { redirect_to processar_processar_resultados_path }
+          else
+            format.html { redirect_to show_processar_resultados_path, notice: 'Carregando os dons' }
+          end
         end
       end
+    else
+      valido = false
     end
+
+    if !valido
+      respond_to do |format|
+        format.html { redirect_to caderno_respostas_path, notice: 'Preencha todo o caderno para ver o seu Dom.' }
+        return
+      end
+    end    
+
   end
 
   def processar
