@@ -60,4 +60,23 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.active_record.dump_schema_after_migration = true
+
+  config.action_mailer.raise_delivery_errors = true
+
+  config.action_mailer.perform_caching = false
+
+  config.action_mailer.default_url_options = { :host => "kallario" }
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+  address: 'kallario',
+  port: 587,
+  domain: 'kallario',
+  authentication: 'plain',
+  enable_starttls_auto: true,
+  user_name: "admin",
+  password: "password"
+  }
+
 end

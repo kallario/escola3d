@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
+  hostname: kallario
   database: escola3d_production
   username: dons
   password: <%= ENV['DONS_DATABASE_PASSWORD'] %>

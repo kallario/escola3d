@@ -64,14 +64,15 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-  address: 'in-v3.mailjet.com',
+  address: 'kallario',
   port: 587,
-  domain: 'in-v3.mailjet.com',
+  domain: 'kallario',
   authentication: 'plain',
   enable_starttls_auto: true,
-  user_name: "9e23c996228ab60586bc4a997cea8d1e",
-  password: "36c84a2964eb5096fb73140fe72b5097"
+  user_name: "admin",
+  password: "password"
   }
+
 
 
   # Ignore bad email addresses and do not raise email delivery errors.
