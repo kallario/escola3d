@@ -70,7 +70,7 @@ Rails.application.configure do
   authentication: 'plain',
   enable_starttls_auto: true,
   user_name: "admin",
-  password: "password"
+  password: ENV['DONS_DATABASE_PASSWORD'].present?
   }
 
 
